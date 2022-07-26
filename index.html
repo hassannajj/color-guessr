@@ -8,11 +8,21 @@
 <body>
     <div class="title">Color Game</div>
     <div class="content">
+        <div class="timer">0:00</div>
         <div class="canvas"></div>
         <div class="buttons">
-            <button class="red">Red</button>
-            <button class="green">Green</button>
-            <button class="blue">Blue</button>
+            <div class="red">
+                <button class="red-button">+10<br>Red</button>
+                <div class="red-score">0</div>
+            </div>
+            <div class="green">
+                <button class="green-button">+10<br>Green</button>
+                <div class="green-score">0</div>
+            </div>
+            <div class="blue">
+                <button class="blue-button">+10<br>Blue</button>
+                <div class="blue-score">0</div>
+            </div>
         </div>
         <div class="goal"></div>
         <button class="reset">Reset</button>
@@ -21,6 +31,10 @@
         <h3>How to play:</h3>
         You must click the individual buttons until the color 
         of your canvas matches the random color of the goal.
+    </div>
+    <div class="high-score">
+        <h5>High Score:</h5>
+        0:50
     </div>
 
     <script src="script.js"></script>

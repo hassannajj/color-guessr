@@ -38,21 +38,39 @@ button {
     border-radius: 5px;
 }
 
-.buttons .red {
+.buttons {
+    display: flex;
+    gap: 2px;
+}
+
+.red-button {
     background-color: lightcoral;
 }
 
-.buttons .green {
+.green-button {
     background-color: lightgreen;
 }
 
-.buttons .blue {
+.blue-button {
     background-color: lightblue;
 }
 
+.red-score,
+.green-score,
+.blue-score {
+    text-align: center;
+}
 
 
 .instructions {
     text-align: center;
     margin: 0px 150px;
+    margin-bottom: 50px;
+}
+
+.high-score {
+    text-align: center;;
+}
+.high-score h5 {
+    margin-bottom: 0px;
 }
