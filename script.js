@@ -17,9 +17,15 @@ function reset() {
     currBlue = 0;
     updateScore();
     randomColor();
+    win = false;
+    winningText.textContent = "";
+    seconds = -1;
 }
 
-function startTimer() {}
+function incrementTimer() {
+    seconds += 1;
+    timer.textContent = seconds;
+}
 
 
 function changeRed(x) {
@@ -28,6 +34,7 @@ function changeRed(x) {
         currRed -= x;
     }
     updateContent();
+    startTimer();
 }
 
 function changeGreen(x) {
@@ -97,6 +104,11 @@ const blueScore = document.getElementById('blue-score');
 
 const winningText = document.getElementById('you-won');
 var win = false;
+
+var seconds = 0;
+var timerVar = setInterval(incrementTimer, 1000);
+const timer = document.getElementById('timer');
+
 
 randomColor();
 
