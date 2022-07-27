@@ -23,8 +23,10 @@ function reset() {
 }
 
 function incrementTimer() {
-    seconds += 1;
-    timer.textContent = seconds;
+    if (!win) {
+        seconds += 1;
+        timer.textContent = seconds;
+    }
 }
 
 
@@ -34,7 +36,6 @@ function changeRed(x) {
         currRed -= x;
     }
     updateContent();
-    startTimer();
 }
 
 function changeGreen(x) {
@@ -83,8 +84,18 @@ function checkWin() {
 
 function showEnd() {
     winningText.textContent = '★You won!★';
+    saveHighScore();
+    highScore.textContent = localStorage['high-score'];
 }
 
+function saveHighScore() {
+    if (! localStorage['high-score']) {
+        localStorage['high-score'] = seconds;
+    } else if (seconds < localStorage['high-score']) {
+        localStorage['high-score'] = seconds;
+    }
+    
+}
 
 // Script
 var goalRed;
@@ -109,6 +120,7 @@ var seconds = 0;
 var timerVar = setInterval(incrementTimer, 1000);
 const timer = document.getElementById('timer');
 
+const highScore = document.getElementById('high-score');
 
 randomColor();
 

@@ -79,9 +79,9 @@ button {
     margin-bottom: 25px;
 }
 
-.high-score {
+#high-score {
     text-align: center;;
 }
-.high-score h5 {
+#high-score h5 {
     margin-bottom: 0px;
 }
