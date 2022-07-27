@@ -10,7 +10,14 @@ function randomColor() {
 }
 
 
-function reset() {}
+function reset() {
+    canvas.style.cssText = "background-color: rgb(0, 0, 0)";
+    currRed = 0;
+    currGreen = 0;
+    currBlue = 0;
+    updateScore();
+    randomColor();
+}
 
 function startTimer() {}
 
