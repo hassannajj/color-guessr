@@ -55,6 +55,7 @@ function changeBlue(x) {
 
 function updateContent() {
     if (!win) {
+        clickAudio.play();
         updateCanvas();
         updateScore();
         checkWin();
@@ -108,7 +109,7 @@ var currBlue = 0;
 const canvas = document.getElementById('canvas');
 const goal = document.getElementById('goal');
 
-var clickAudio = new Audio('audio_file.mp3');
+var clickAudio = new Audio('audio.wav');
 
 const redScore = document.getElementById('red-score');
 const greenScore = document.getElementById('green-score');
