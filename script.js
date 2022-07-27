@@ -1,4 +1,3 @@
-console.log('test 01')
 
 function randomColor() {
     // Picks a random color for the goal by picking a random number
@@ -109,6 +108,8 @@ var currBlue = 0;
 const canvas = document.getElementById('canvas');
 const goal = document.getElementById('goal');
 
+var clickAudio = new Audio('audio_file.mp3');
+
 const redScore = document.getElementById('red-score');
 const greenScore = document.getElementById('green-score');
 const blueScore = document.getElementById('blue-score');
@@ -121,9 +122,7 @@ var timerVar = setInterval(incrementTimer, 1000);
 const timer = document.getElementById('timer');
 
 const highScore = document.getElementById('high-score');
+highScore.textContent = localStorage['high-score'];
+
 
 randomColor();
-
-// TODO: Maybe have a timer to keep score
-// TODO: Reset the timer with the reset button
-// TODO: keep the high score in a log file somewhere
