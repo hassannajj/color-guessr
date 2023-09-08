@@ -1,4 +1,4 @@
-# color-game
+# Color Guessr
 
 This is a game created by html, js, and css.
 
